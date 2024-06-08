@@ -1,89 +1,57 @@
 <html>
     <head>
-        
-        <link rel="stylesheet" href="css/all.min.css">
+        <title>Bookmark</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Righteous&amp;display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">  
         <link rel="stylesheet" href="css/media-quaery.css">
         <link rel="stylesheet" href="css/style.css">
         
     </head>
     <body>
-        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+       
+        <div class="container ">
+            <div class="text-center"> <h1 class="my-5">Bookmarker</h1></div>
+            <div class=" book m-auto"></div>
+             <div class="bord-dote ">
+                 <h2 class="text-center my-5 fw-bold"><i class="fa-solid fa-bookmark m-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark m-2"></i></h2>
+                 <label for="sitename" class="fw-bold mb-2"><i class="fa-solid fa-book-bookmark me-2"></i>Site Name </label>
+                 <input oninput="validateItem(this)" type="text" class="form-control mb-3" id="sitename" placeholder="Bookmark Name">
+                 <div class="alert d-none alert-info text-black-50 py-1 w-50 mt-2 fw-bold" >
+                     please enter valid name must be at least 3 char ....
+                 </div>
+                 <label for="siteurl" class="fw-bold  mb-2 "><i class="fa-solid fa-link m-2"></i> Site URL </label>
+                 <input oninput="validateItem(this)" type="text" class="form-control" id="siteurl" placeholder="Website URL">        
+                 <div class="alert d-none alert-info text-black-50 py-1 w-25 mt-2 fw-bold" >
+                     please enter valid URL...
+                 </div>
+                 <input type="search" id="searchElement" class="form-control mt-3" oninput="srechItem()" placeholder="SearchByName">
+                 <div class="text-center my-3">  <button onclick="submitItem()" class="btn btn-submit px-5 py-2" id="SubmitItem">Submit</button></div>
+                 <div class="text-center my-3">  <button onclick="updateForm()" class="btn btn-submit px-5 py-2 d-none" id="update">Update</button></div>
+                         
 
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav> -->
+             </div>
 
-          <nav>
-            <div class="nav " id="nav-tab" role="tablist">
-              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-              <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
-            </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">jfjdjfjfjfj
-              <div class="row row-gap-4">
-                <div class="col-md-4">
-                <img src="imgs/portfolio/1.jpg" alt="" class="w-100">
-               </div>
-               <div class="col-md-4">
-                <img src="imgs/portfolio/2.jpg" alt="" class="w-100">
-               </div>
-               <div class="col-md-4">
-                <img src="imgs/portfolio/3.jpg" alt="" class="w-100">
-               </div>
-               <div class="col-md-4">
-                <img src="imgs/portfolio/4.jpg" alt="" class="w-100">
-               </div>
-               <div class="col-md-4">
-                <img src="imgs/portfolio/5.jpg" alt="" class="w-100">
-               </div>
-               <div class="col-md-4">
-                <img src="imgs/portfolio/6.jpg" alt="" class="w-100">
-               </div>
-               </div>
-              
-            </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">mmvmvmvm
-              mvmvmvmv
-            </div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
-          </div>
+             <table class="table mt-4 text-center" >
+                 <thead>
+                     <tr>
+                     <th>Index</th>
+                     <th>Website Name</th>
+                     <th>Visit</th>
+                     <th>Delete</th>
+                     <th>Update</th>
+                 </tr>
+                 </thead>
+                    <tbody id="demo"></tbody>
+             </table>     
+         </div>
+
+           
           <script src="js/bootstrap.bundle.min.js"></script>
           <script src="js/main.js"></script>
     </body>
